@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<html>
+
+<head>
+    <style>
+        body
+        {
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:100% 100%;
+        background-image:url({{url_for('static',filename='css/wine4.jpg')}})
+        }
+
+    </style>
+</head>
+{% endblock %}
+{% block body %}
+<body>
+<div class="content">
+    <h1 style="text-align: center">CHECK QUALITY OF WINE</h1>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="float" name="fixed_acidity" id="fixed_acidity" placeholder="Fixed Acidity(ex-11.6)">
+            <input type="float" name="volatile_acidity" id="volatile_acidity" placeholder="Volatile Acidity(ex-0.58)">
+            <input type="float" name="citric_acid" id="citric_acid" placeholder="Citric Acid(ex-0.66)">
+            <input type="float" name="residual_sugar" id="residual_sugar" placeholder="Residual Sugar(ex-2.2)">
+            <input type="float" name="chlorides" id="chlorides" placeholder="Chlorides(ex-0.074)">
+            <input type="float" name="free_sulfur_dioxide" id="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide(ex-10)" >
+            <input type="float" name="total_sulfur_dioxide" id="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide(ex-47)" >
+            <input type="float" name="density" id="density" placeholder="Density(ex-1.57)" >
+            <input type="float" name="pH" id="pH" placeholder="PH(ex-3.25)" >
+            <input type="float" name="sulphates" id="sulphates" placeholder="Sulphates(ex-0.57)" >
+            <input type="float" name="alcohol" id="alcohol" placeholder="Alcohol(ex-10)" >
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+</body>
+{% endblock %}

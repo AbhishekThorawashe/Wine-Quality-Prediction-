@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <style>
+        body
+        {
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:100% 100%;
+        position: relative;
+
+        background-image:url({{url_for('static',filename='css/wine4.jpg')}})
+        }
+    </style>
+</head>
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+<div align="center" >
+    <div class="table-users">
+   <div class="header">Quality Of Wine</div>
+
+      <p>{{prediction}}</p>
+</div>
+</div>
+
+
+</body>
+
+</html>
